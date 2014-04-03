@@ -1,0 +1,88 @@
+
+// overrides default docs, just for demo
+// --------------------------------------------------
+
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Lustria", Georgia, "Times New Roman", Times, serif;
+
+// fonts
+body {
+    font-family: $font-family-sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: $font-family-serif;
+}
+
+
+// top header
+.top-header {
+    background-color: #2D2B41;
+    &.bs-docs-nav {
+        border-color: darken(#2D2B41, 5%);
+    }
+}
+
+.bs-docs-nav .navbar-nav > .active > a,
+.bs-docs-nav .navbar-nav > .active > a:hover {
+    background-color: darken(#2D2B41, 5%);
+}
+.bs-docs-nav .navbar-toggle {
+    border-color: darken(#2D2B41, 5%);
+    &:hover {
+        background-color: lighten(#2D2B41, 5%);
+        border-color: darken(#2D2B41, 5%);
+    }
+}
+.navbar-nav {
+    margin: 0 -15px;
+    @media (min-width: 768px) {
+        margin: 0;
+    }
+}
+.bs-docs-nav .navbar-collapse {
+    border-color: transparent;
+}
+
+
+// header
+.header {
+    background: url('../images/bg_header.jpg') repeat-x;
+
+}
+.bs-docs-home, .bs-header {
+    color: #c8c8e6;
+}
+
+// content
+.highlight pre {
+    white-space: pre;
+}
+
+.section-heading {
+    padding-top: 80px;
+    &.first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+}
+
+.row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+// footer
+.bs-footer {
+    background-color: #2C2C44;
+    color: #575781;
+    a {
+        color: #575781;
+    }
+}
+
+
+body {
+    position: relative;
+    padding-top: 50px;    
+}

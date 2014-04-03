@@ -1,0 +1,104 @@
+.ih-item.square.effect4 {
+    overflow: hidden;
+    position: relative;
+    
+    &.colored {
+        .info {
+            background: $overlay_colored_dark;
+        }
+
+        .mask1,
+        .mask2 {
+            background: $overlay_colored_fallback;
+            background: $overlay_colored;            
+        }
+    }
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .mask1,
+    .mask2 {
+        position: absolute;
+        background: $overlay_dark_fallback;
+        background: $overlay_dark;      
+        height: 361px;
+        width: 361px;
+        @include transition(  all .35s ease-in-out);
+    }
+
+    .mask1 {
+        left: auto;
+        right: 0;
+        top: 0;
+        @include transform( rotate(56.5deg) translateX(-180px) );
+        @include transform-origin( 100% 0% );         
+    }
+
+    .mask2 {
+        top: auto;
+        bottom: 0;
+        left: 0;
+        @include transform( rotate(56.5deg) translateX(180px) );
+        @include transform-origin( 0% 100% );        
+    }
+
+    .info {
+        background: $overlay_dark_dark;
+        height: 0;
+        visibility: hidden;
+        width: 361px;
+        @include transform( rotate(-33.5deg) translate(-112px, 166px) );
+        @include transform-origin( 0% 100% );        
+        @include transition(  all .35s ease-in-out .35s);
+
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: transparent;
+            margin-top: 5px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            @include transition(  all .35s ease-in-out .35s);
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            opacity: 0;
+            @include transition(  all .35s ease-in-out .35s);
+        }
+    }
+
+    a:hover {
+        .mask1 {
+            @include transform( rotate(56.5deg) translateX(1px) );
+        }
+
+        .mask2 {
+            @include transform( rotate(56.5deg) translateX(-1px) );
+        }
+
+        .info {
+            width: 300px;
+            height: 120px;
+            visibility: visible;
+            top: 40px;
+            @include transform( rotate(0deg) translate(0, 0) );
+
+            h3,
+            p {
+                opacity: 1;
+            }
+        }
+    }
+}

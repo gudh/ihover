@@ -1,0 +1,154 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect14 {
+    @include perspective(900px);
+    .img {
+        visibility: visible;
+        opacity: 1;
+        @include transition( all 0.4s ease-out );
+    }
+
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        opacity: 0;
+        visibility: hidden;
+        @include transition( all .35s ease-in-out .3s);
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect14.left_to_right {
+    .img {
+        @include transform( rotateY(0) );
+        @include transform-origin( 100% 50% );
+    }
+
+    .info {
+        @include transform( rotateY(90deg) );
+        @include transform-origin( 0% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateY(-90deg) );
+        }
+
+        .info {
+            @include transform( rotateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect14.right_to_left {
+    .img {
+        @include transform( rotateY(0) );
+        @include transform-origin( 0% 50% );
+    }
+
+    .info {
+        @include transform( rotateY(-90deg) );
+        @include transform-origin( 100% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateY(90deg) );
+        }
+
+        .info {
+            @include transform( rotateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect14.top_to_bottom {
+    .img {
+        @include transform( rotateX(0) );
+        @include transform-origin( 50% 100% );
+    }
+
+    .info {
+        @include transform( rotateX(-90deg) );
+        @include transform-origin( 50% 0 );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateX(90deg) );
+        }
+
+        .info {
+            @include transform( rotateX(0) );
+        }
+    }    
+}
+
+
+// -------------------------
+.ih-item.circle.effect14.bottom_to_top {
+    .img {
+        @include transform( rotateX(0) );
+        @include transform-origin( 50% 0 );
+    }
+
+    .info {
+        @include transform( rotateX(90deg) );
+        @include transform-origin( 50% 100% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateX(-90deg) );
+        }
+
+        .info {
+            @include transform( rotateX(0) );
+        }
+    }   
+}

@@ -1,0 +1,145 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect11 {
+    @include perspective(900px);
+    .img {
+        opacity: 1;
+        @include transform-origin( 50% 50% );
+        @include transition( all 0.35s ease-in-out );
+    }
+
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        opacity: 0;
+        visibility: hidden;
+        @include transition( all .35s ease .35s );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect11.left_to_right {
+    .img {
+        @include transform( translateZ(0) rotateY(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateY(-90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateY(90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect11.right_to_left {
+    .img {
+        @include transform( translateZ(0) rotateY(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateY(90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateY(-90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect11.top_to_bottom {
+    .img {
+        @include transform( translateZ(0) rotateX(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateX(90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateX(-90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateX(0) );
+        }
+    }    
+}
+
+
+// -------------------------
+.ih-item.circle.effect11.bottom_to_top {
+    .img {
+        @include transform( translateZ(0) rotateX(0) );
+    }
+
+    .info {
+        @include transform( translateZ(-1000px) rotateX(-90deg) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateZ(-1000px) rotateX(90deg) );
+        }
+
+        .info {
+            @include transform( translateZ(0) rotateX(0) );
+        }
+    }    
+}

@@ -1,0 +1,63 @@
+.ih-item.square.effect2 {
+    overflow: hidden;
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+    .img {
+        opacity: 1;
+        @include transition(  all .5s ease-in-out );
+        @include transform( rotate(0deg) scale(1) );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        visibility: hidden;
+        @include transition(  all .35s .3s ease-in-out );
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .6s ease-in-out );
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .5s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate(720deg) scale(0) );
+            opacity: 0;
+        }
+
+        .info {
+            visibility: visible;
+
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }
+        }
+    }
+}

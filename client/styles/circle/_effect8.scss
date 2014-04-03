@@ -1,0 +1,189 @@
+
+
+// shared
+// -------------------------
+.ih-item.circle.effect8 {
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    // thanks to the trick http://stackoverflow.com/questions/5395024/transform-scale-after-rotate
+    .img-container {
+        @include transform( scale(1) );
+        @include transition( all .3s ease-in-out );
+
+        .img {
+            opacity: 1;
+            @include transition( all .3s ease-in-out .3s );
+        }
+    }
+
+    .info-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        text-align: center;
+        border-radius: 50%;
+        opacity: 0;
+        pointer-events: none;
+        @include transition( all .3s ease-in-out .3s );
+    }
+
+    .info {
+        width: 100%;
+        height: 100%;
+        background: $overlay_dark_fallback;
+        pointer-events: none;
+        @include transform( scale(.5) );
+        @include transition( all .35s ease-in-out .6s);
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 45px 0 0 0;
+            height: 140px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    a:hover {
+        .img-container {
+            pointer-events: none;
+            @include transform( scale(.5) );
+
+            .img {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+
+        .info-container {
+            opacity: 1;
+
+            .info {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.left_to_right {
+    .img-container {
+        .img {
+            @include transform( translateX(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateX(-100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateX(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.right_to_left {
+    .img-container {
+        .img {
+            @include transform( translateX(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateX(100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateX(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.top_to_bottom {
+    .img-container {
+        .img {
+            @include transform( translateY(0) );
+
+        }
+    }
+
+    .info-container {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateY(100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateY(0) );
+        }        
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect8.bottom_to_top {
+    .img-container {
+        .img {
+            @include transform( translateY(0) );
+        }
+    }
+
+    .info-container {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img-container {
+            .img {
+                @include transform( translateY(-100%) );
+            }
+        }
+
+        .info-container {
+            @include transform( translateY(0) );
+        }        
+    }
+}
+
+

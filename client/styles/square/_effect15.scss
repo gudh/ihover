@@ -1,0 +1,148 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect15 {
+    overflow: hidden;
+    @include perspective(900px);
+    
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .img {
+        opacity: 1;
+        @include transition(  all .4s ease-in-out );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out .3s);
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect15.left_to_right {
+    .img {
+        @include transform( rotateY(0) );
+        @include transform-origin( 100% 50% );
+    }
+
+    .info {
+        @include transform( rotateY(90deg) );
+        @include transform-origin( 0% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateY(-90deg) );
+        }
+
+        .info {
+            @include transform( rotateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect15.right_to_left {
+    .img {
+        @include transform( rotateY(0) );
+        @include transform-origin( 0% 50% );
+    }
+
+    .info {
+        @include transform( rotateY(-90deg) );
+        @include transform-origin( 100% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateY(90deg) );
+        }
+
+        .info {
+            @include transform( rotateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect15.top_to_bottom {
+    .img {
+        @include transform( rotateX(0) );
+        @include transform-origin( 50% 100% );
+    }
+
+    .info {
+        @include transform( rotateX(-90deg) );
+        @include transform-origin( 50% 0 );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateX(90deg) );
+        }
+
+        .info {
+            @include transform( rotateX(0) );
+        }
+    }   
+}
+
+// -------------------------
+.ih-item.square.effect15.bottom_to_top {
+    .img {
+        @include transform( rotateX(0) );
+        @include transform-origin( 50% 0 );
+    }
+
+    .info {
+        @include transform( rotateX(90deg) );
+        @include transform-origin( 50% 100% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateX(-90deg) );
+        }
+
+        .info {
+            @include transform( rotateX(0) );
+        }
+    }  
+}

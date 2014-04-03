@@ -1,0 +1,107 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect9 {
+    @include perspective(900px);
+    
+    &.colored {
+        .info {
+            .info-back {
+                background: $overlay_colored_fallback;
+            }
+
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+    .img {
+        position: relative;
+        z-index: 11;
+        @include transition(  all .5s ease-in-out );
+    }
+
+    .info {
+        z-index: 0;
+        @include transform-style(preserve-3d);
+        .info-back {
+            opacity: 1;
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            background: $overlay_dark_fallback;            
+        }
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect9.left_to_right {
+    .img {
+        @include transform-origin( 100% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate3d(0,1,0,180deg) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect9.right_to_left {
+    .img {
+        @include transform-origin( 0% 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate3d(0,1,0,-180deg) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect9.top_to_bottom {
+    .img {
+        @include transform-origin( 50% 100% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate3d(1,0,0,-180deg) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect9.bottom_to_top {
+    .img {
+        @include transform-origin( 50% 0 );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate3d(1,0,0,180deg) );
+        }
+    }
+}

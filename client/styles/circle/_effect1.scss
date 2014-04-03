@@ -1,0 +1,79 @@
+
+// 
+// --------------------------------------------------
+.ih-item.circle.effect1 {
+
+    .spinner {
+        width: 230px;
+        height: 230px;
+        border: 10px solid #ecab18;
+        border-right-color: #1ad280;
+        border-bottom-color: #1ad280;
+        border-radius: 50%;
+        @include transition( all .8s ease-in-out );
+    }
+
+    .img {
+        position: absolute;
+        top: 10px;
+        bottom: 0;
+        left: 10px;
+        right: 0;
+        width: auto;
+        height: auto;
+        &:before {
+            display: none;
+        }
+    }
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+            background: $overlay_colored;
+        }
+    }
+
+    .info {
+        top: 10px;
+        bottom: 0;
+        left: 10px;
+        right: 0;
+        background: $overlay_dark_fallback;
+        background: $overlay_dark;
+        opacity: 0;
+        @include transition( all .8s ease-in-out );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+    a:hover {
+        .spinner {
+            @include transform( rotate(180deg) );
+        }
+
+        .info {
+            opacity: 1;
+        }
+    }
+}

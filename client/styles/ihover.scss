@@ -1,0 +1,59 @@
+@import
+// Shared part of all effects
+// -------------------------
+    "bourbon/bourbon"           // mixins for Sass: http://bourbon.io/docs/
+,   "shared/variables"
+,   "shared/default-styles"     // some styling
+
+//  Circle
+// -------------------------
+         
+//  Circle only effects
+,   "circle/effect1"            // Border rotate / Overlay fadeIn
+
+//  Others
+,   "circle/effect2"            // Image rotate / Overlay slideIn
+,   "circle/effect3"            // 
+,   "circle/effect4"            // Image slideOut / Cover slideIn (different easing)
+,   "circle/effect5"            // Single: Overlay flip
+,   "circle/effect6"            // Image scaleUp(Down) fadeOut / Cover scaleUp(Down) fadeIn
+,   "circle/effect7"            // Image scaleDown fadeOut / Cover slideIn
+,   "circle/effect8"            // scaleDown > Slide together > ScaleUp (in order)
+,   "circle/effect9"            // Image slideOut fadeOut / Cover scaleUp fadeIn
+,   "circle/effect10"           // 
+,   "circle/effect11"           // Flip, four directions
+,   "circle/effect12"           // Rotate out and in, four direction
+,   "circle/effect13"           // Overlay fadeIn / Text slideIn
+,   "circle/effect14"           // Open / Close
+,   "circle/effect15"           // Single: rotate in and out
+,   "circle/effect16"
+,   "circle/effect17"
+,   "circle/effect18"
+,   "circle/effect19"
+,   "circle/effect20"
+
+
+//  Square
+// -------------------------
+
+//  Square only effects
+,   "square/effect1"            //
+,   "square/effect2"            //
+,   "square/effect3"            // 
+,   "square/effect4"            //
+
+//  Others
+,   "square/effect5"            // Image scaleDown / Cover rotate scaleUp
+,   "square/effect6"            // Image zoomIn / Overly fadeIn / Text slideIn
+,   "square/effect7"            // Single: Image zoomIn / Overly fadeIn / Text scaleDown fadeIn
+,   "square/effect8"            // Image scaleUp(Down) fadeOut / Cover scaleUp(Down) fadeIn
+,   "square/effect9"            // Image open, four directions
+,   "square/effect10"           // Image slideOut / Cover slideIn
+,   "square/effect11"           // Image scaleDown fadeOut / Cover slideIn
+,   "square/effect12"           //
+,   "square/effect13"           // Image zoomIn / Overlay slideIn
+,   "square/effect14"           // Image slideOut fadeOut / Cover scaleUp fadeIn
+,   "square/effect15"           // Open / Close
+;
+
+

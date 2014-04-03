@@ -1,0 +1,75 @@
+.ih-item.circle.effect17 {
+    .info {
+        opacity: 0;
+        @include transform( scale(0) );
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            opacity: 0;
+            @include transition( all .35s ease-in-out );
+        }
+    }
+
+    a:hover {
+        .img {
+            &:before {
+                box-shadow: 
+                    inset 0 0 0 110px $overlay_dark_fallback,
+                    inset 0 0 0 16px rgba(255,255,255,0.8),
+                    0 1px 2px rgba(0,0,0,0.1);
+
+                box-shadow: 
+                    inset 0 0 0 110px $overlay_dark,
+                    inset 0 0 0 16px rgba(255,255,255,0.8),
+                    0 1px 2px rgba(0,0,0,0.1);
+            }
+        }
+
+        .info {
+            opacity: 1;
+            @include transform( scale(1) );
+
+            p {
+                 opacity: 1;
+            }
+        }
+    }
+
+    &.colored {
+        a:hover {
+            .img {
+                &:before {
+                    box-shadow: 
+                        inset 0 0 0 110px $overlay_colored_fallback,
+                        inset 0 0 0 16px rgba(255,255,255,0.8),
+                        0 1px 2px rgba(0,0,0,0.1);
+
+                    box-shadow: 
+                        inset 0 0 0 110px $overlay_colored,
+                        inset 0 0 0 16px rgba(255,255,255,0.8),
+                        0 1px 2px rgba(0,0,0,0.1);
+                }
+            }
+        }     
+    }
+}

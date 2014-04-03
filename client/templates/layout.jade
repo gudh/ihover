@@ -1,0 +1,78 @@
+doctype
+html.no-js.iarouse
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        title
+        meta(name='description', content='')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+        // stylesheets
+        block stylesheets
+            link(href='http://fonts.googleapis.com/css?family=Lustria|Lato:300,400,700,400italic', rel='stylesheet', type='text/css')
+            // build:css({.tmp,client}) styles/main.css 
+            link(href="bower_components/bootstrap/dist/css/bootstrap.min.css", rel="stylesheet")
+            link(href="bower_components/google-code-prettify/src/prettify.css", rel="stylesheet")
+            link(href="styles/docs.css", rel="stylesheet")
+            link(href="styles/ihover.css", rel="stylesheet")
+            link(href="styles/docs-overrides.css", rel="stylesheet")
+            // endbuild 
+
+    body(data-spy="scroll", data-target=".bs-docs-sidebar")
+
+        //if lt IE 8
+            <p> you are using an outdated browser, please update!</p>
+
+        block header
+            header.top-header.navbar.navbar-inverse.navbar-fixed-top.bs-docs-nav(role="banner")
+                .container
+                    .navbar-header
+                        button.navbar-toggle(type="button", data-toggle="collapse", data-target=".bs-navbar-collapse")
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                        a.navbar-brand(href="http://iarouse.com/") iArouse
+                    nav.collapse.navbar-collapse.bs-navbar-collapse(role="navigation")
+                        ul.nav.navbar-nav
+                            li.active
+                                a(href="#") Demo
+
+        block bs-header
+            .header.bs-header#content
+                .container
+                    h1 iHover
+                    p CSS3 hover effects pack
+
+
+        //- Docs container
+        .container.bs-docs-container
+            .row
+                .col-md-3
+                    .bs-sidebar.hidden-print
+                        ul.nav.bs-sidenav
+                            block docs-sidebar
+
+                .col-md-9(role="main")
+                    block content
+
+
+        // Footer
+        block footer
+            footer.bs-footer
+                .container.text-center
+                    p Copyright 2013 
+                        a(href="http://iarouse.com/") iArouse.com
+
+
+        // Scripts
+        block scripts
+            // build:js({.tmp,client}) scripts/app.js 
+            script(src="bower_components/jquery/dist/jquery.min.js")
+            script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+            script(src="bower_components/jquery.smooth-scroll/jquery.smooth-scroll.min.js")
+            script(src="bower_components/google-code-prettify/src/prettify.js")
+            script(src="scripts/application.js")
+            script(src="scripts/main.js")
+            // endbuild
+

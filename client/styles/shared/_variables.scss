@@ -1,0 +1,10 @@
+
+// Variables
+// --------------------------------------------------
+$overlay_dark:                          rgba(0, 0, 0, .6);              // color of overlay background
+$overlay_dark_fallback:                 #333;                           // for IE 8 & non-tranparent
+$overlay_dark_dark:                     #111;
+
+$overlay_colored:                       rgba(26, 74, 114, .6);          // color of colored overlay background
+$overlay_colored_fallback:              #1a4a72;                        // for IE 8 & non-tranparent
+$overlay_colored_dark:                  darken($overlay_colored, 15%);

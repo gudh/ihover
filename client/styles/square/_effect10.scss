@@ -1,0 +1,140 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect10 {
+    overflow: hidden;
+    
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+    .img {
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+        }
+    }
+
+    a:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect10.left_to_right {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect10.right_to_left {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect10.top_to_bottom {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect10.bottom_to_top {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }
+}
+

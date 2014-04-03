@@ -1,0 +1,94 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect16 {
+    .img {
+        z-index: 11;
+        @include transition( all 0.35s ease-in-out );
+    }
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            @include transition( all .35s ease-in-out );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect16.left_to_right {
+    .img {
+        @include transform-origin( 95% 40% );
+        &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            left: 95%;
+            margin: -4px 0 0 -4px;
+            background: rgba(0, 0, 0, .8);
+            box-shadow: 0 0 1px rgba(255,255,255,0.9);
+        }        
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate(-120deg) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect16.right_to_left {
+    .img {
+        @include transform-origin( 5% 40% );
+        &:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            border-radius: 50%;
+            top: 40%;
+            left: 5%;
+            margin: -4px 0 0 -4px;
+            background: rgba(0, 0, 0, .8);
+            box-shadow: 0 0 1px rgba(255,255,255,0.9);
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate(120deg) );
+        }
+    }
+}

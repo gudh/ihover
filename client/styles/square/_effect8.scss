@@ -1,0 +1,127 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect8 {
+    overflow: hidden;
+    
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+    .img {
+        opacity: 1;
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+            @include transition(  all .35s .1s ease-in-out );
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            @include transition(  all .35s .15s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+
+            h3,
+            p {
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect8.scale_up {
+    .img {
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transform( scale(0) );
+
+        h3,
+        p {
+            @include transform( scale(0) );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(5) );
+        }
+
+        .info {
+            @include transform( scale(1) );
+
+            h3,
+            p {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect8.scale_down {
+    .img {
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transform( scale(5) );
+
+        h3,
+        p {
+            @include transform( scale(5) );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(.5) );
+        }
+
+        .info {
+            @include transform( scale(1) );
+
+            h3,
+            p {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+

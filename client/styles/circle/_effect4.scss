@@ -1,0 +1,146 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect4 {
+    .img {
+        opacity: 1;
+        @include transition( all 0.4s ease-in-out );
+    }
+
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        @include transition( all .35s ease );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            @include transition( all .35s ease-in-out );
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect4.left_to_right {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect4.right_to_left {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(-100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.circle.effect4.top_to_bottom {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }    
+}
+
+
+// -------------------------
+.ih-item.circle.effect4.bottom_to_top {
+    .img {
+        @include transform( translateY(0) );
+    }
+
+    .info {
+        @include transform( translateY(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(100%) );
+        }
+
+        .info {
+            @include transform( translateY(0) );
+        }
+    }    
+}

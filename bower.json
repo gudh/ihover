@@ -1,0 +1,11 @@
+{
+  "name": " ",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "~3.1.0",
+    "jquery": "~1.11.0",
+    "google-code-prettify": "~1.0.1",
+    "jquery.smooth-scroll": "~1.4.13",
+    "bourbon": "~3.1.8"
+  }
+}

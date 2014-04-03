@@ -1,0 +1,132 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect13 {
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+            background: $overlay_colored;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        background: $overlay_dark;
+        opacity: 0;
+        pointer-events: none;
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            visibility: hidden;
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+            @include transition( all .35s ease-in-out );
+        }
+
+        p {
+            visibility: hidden;
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            @include transition( all .35s ease-in-out );
+        }
+    }
+
+    a:hover {
+        .info {
+            opacity: 1;
+        }
+
+        h3 {
+            visibility: visible;
+        }
+
+        p {
+            visibility: visible;
+        }
+    }
+}
+
+
+
+// -------------------------
+.ih-item.circle.effect13.from_left_and_right {
+    .info {
+        h3 {
+            @include transform( translateX(-100%) );
+        }
+
+        p {
+            @include transform( translateX(100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateX(0) );
+        }
+
+        p {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect13.top_to_bottom {
+    .info {
+        h3 {
+            @include transform( translateY(-100%) );
+        }
+
+        p {
+            @include transform( translateY(-100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateY(0) );
+        }
+
+        p {
+            @include transform( translateY(0) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect13.bottom_to_top {
+    .info {
+        h3 {
+            @include transform( translateY(100%) );
+        }
+
+        p {
+            @include transform( translateY(100%) );
+        }
+    }
+
+    a:hover {
+        h3 {
+            @include transform( translateY(0) );
+        }
+
+        p {
+            @include transform( translateY(0) );
+        }
+    }
+}
+

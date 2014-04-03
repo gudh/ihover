@@ -1,0 +1,123 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect1 {
+    overflow: hidden;
+    
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .img {
+        z-index: 11;
+        position: absolute; // for z-index
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        visibility: hidden;
+        opacity: 0;
+        @include transform( scale(0) );
+        @include transition(  all .35s ease-in-out );
+    }
+
+    a:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect1.left_and_right {
+    .info {
+        h3 {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            margin: 0;
+        }
+
+        p {
+            position: absolute;
+            right: 12px;
+            bottom: 12px;
+            margin: 0;
+            font-style: italic;
+            font-size: 12px;
+            color: #bbb;
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(.6) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect1.top_to_bottom {
+    .info {
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px 10px 0 4px;
+            margin: 10px 0 0 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            color: #bbb;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(30px) scale(.6) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect1.bottom_to_top {
+    .info {
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px 10px 0 4px;
+            margin: 134px 0 0 0;
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            color: #bbb;
+            padding: 5px;
+            text-align: center;
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateY(-30px) scale(.6) );
+        }
+    }
+}

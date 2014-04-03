@@ -1,0 +1,104 @@
+
+// Shared
+// -------------------------
+.ih-item.circle.effect6 {
+    .img {
+        opacity: 1;
+        @include transform( scale(1) );
+        @include transition( all 0.35s ease-in-out );
+    }
+
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+        }
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        opacity: 0;
+        @include transition( all .35s ease-in-out );
+
+        h3 {
+            color: #fff;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 2px;
+            font-size: 22px;
+            margin: 0 30px;
+            padding: 55px 0 0 0;
+            height: 110px;
+            text-shadow: 
+                0 0 1px #fff, 
+                0 1px 2px rgba(0,0,0,0.3);            
+        }
+
+        p {
+            color: #bbb;
+            padding: 10px 5px;
+            font-style: italic;
+            margin: 0 30px;
+            font-size: 12px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+        }
+    }
+
+}
+
+// -------------------------
+.ih-item.circle.effect6.scale_up {
+    .info {
+        @include transform( scale(.5) );
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            @include transform( scale(1.5) );
+        }
+
+        .info {
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.circle.effect6.scale_down {
+    .info {
+        @include transform( scale(1.5) );
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            @include transform( scale(.5) );
+        }
+
+        .info {
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+
+.ih-item.circle.effect6.scale_down_up {
+    .info {
+        @include transform( scale(.5) );
+        @include transition( all .35s ease-in-out .2s );
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            @include transform( scale(.5) );
+        }
+
+        .info {
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+

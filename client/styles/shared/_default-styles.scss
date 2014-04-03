@@ -1,0 +1,90 @@
+//  Shared style
+// --------------------------------------------------
+
+// All item
+// -------------------------
+.ih-item {
+    position: relative;
+    @include transition( all 0.35s ease-in-out );
+    &,
+    * {
+        @include box-sizing(border-box);
+    }
+
+    a {
+        color: #333;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Circle item
+// -------------------------
+.ih-item.circle {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+
+    .img {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        &:before {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 
+                inset 0 0 0 16px rgba(255,255,255,0.6),
+                0 1px 2px rgba(0,0,0,0.3);            
+            @include transition( all 0.35s ease-in-out );
+        }
+
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    .info {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        text-align: center;
+        border-radius: 50%;
+        @include backface-visibility(hidden);
+    }
+}
+
+
+// Square item
+// -------------------------
+.ih-item.square {
+    position: relative;
+    width: 316px; // 300px + 8px * 2 (border)
+    height: 216px; // 200px + 8px * 2 (border)
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+
+    .info {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right: 0;
+        text-align: center;
+        @include backface-visibility(hidden);  
+    }
+
+}

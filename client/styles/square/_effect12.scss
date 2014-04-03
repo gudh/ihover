@@ -1,0 +1,190 @@
+
+// Shared
+// -------------------------
+.ih-item.square.effect12 {
+    overflow: hidden;
+    &.colored {
+        .info {
+            background: $overlay_colored_fallback;
+            background: $overlay_colored;
+
+            h3 {
+                background: $overlay_colored_dark;
+            }
+        }
+    }
+
+    .img {
+        @include transition( all .35s ease-in );
+    }
+
+    .info {
+        background: $overlay_dark_fallback;
+        background: $overlay_dark;
+        visibility: hidden;
+        opacity: 0;
+        @include transition( all .35s ease-in );
+
+        h3 {
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            font-size: 17px;
+            padding: 10px;
+            background: $overlay_dark_dark;
+            margin: 30px 0 0 0;
+            @include transition( all .35s ease-in );
+        }
+
+        p {
+            font-style: italic;
+            font-size: 12px;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            @include transition( all .35s ease-in );
+        }
+    }
+
+    a:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transition-delay( .25s );
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.left_to_right {
+    .info {
+        @include transform( translate(-460px, -100px) rotate(-180deg) );
+
+        h3 {
+            @include transform( translateY(-100px) );
+        }
+
+        p {
+            @include transform( translateX(-300px) rotate(-90deg) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+
+            h3 {
+                @include transform( translateY(0px) );
+            }
+
+            p {
+                @include transform( translateX(0px) rotate(0deg) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.right_to_left {
+    .info {
+        @include transform( translate(460px, -100px) rotate(180deg) );
+
+        h3 {
+            @include transform( translateY(-100px) );
+        }
+
+        p {
+            @include transform( translateX(300px) rotate(90deg) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+
+            h3 {
+                @include transform( translateY(0px) );
+            }
+
+            p {
+                @include transform( translateX(0px) rotate(0deg) );
+            }            
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect12.top_to_bottom {
+    .info {
+        @include transform( translate(-265px, -145px) rotate(-45deg) );
+
+        h3 {
+            @include transform( translate(200px, -200px) );
+        }
+
+        p {
+            @include transform( translate(200px, -200px) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .4s );
+            }
+        }
+    }
+}
+
+
+// -------------------------
+.ih-item.square.effect12.bottom_to_top {
+    .info {
+        @include transform( translate(265px, 145px) rotate(45deg) );
+
+        h3 {
+            @include transform( translate(200px, -200px) );
+        }
+
+        p {
+            @include transform( translate(-200px, 200px) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+            @include transition-delay( .2s );
+
+            h3 {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .3s );
+            }
+
+            p {
+                @include transform( translate(0px,0px) );
+                @include transition-delay( .4s );
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,9 @@
+node_modules
+demo
+.tmp
+.sass-cache
+client/bower_components
+client/index.html
+
+.DS_Store
+npm-debug.log
