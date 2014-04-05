@@ -12,7 +12,13 @@ iHover is a collection of hover effects using pure CSS, inspired by [this codrop
 * Bootstrap compatible (Bootstrap is not needed though)
 * Well documented
 
-The production code is inside "src" folder.
+
+## Install
+The production code is inside "src" folder, you can use Bower to install it:
+```
+$ bower install ihover
+```
+
 
 ## Preview
 ![preview image](./preview/preview.png)
