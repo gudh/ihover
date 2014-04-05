@@ -8,11 +8,11 @@ iHover is a collection of hover effects using pure CSS, inspired by [this codrop
 
 * Pure CSS!
 * Sass CSS
-* Module code
+* Modular code
 * Bootstrap compatible (Bootstrap is not needed though)
 * Well documented
 
-The production code are inside "src" folder.
+The production code is inside "src" folder.
 
 ## Preview
 ![preview image](./preview/preview.png)

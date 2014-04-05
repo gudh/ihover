@@ -1,7 +1,10 @@
 {
-  "name": " ",
+  "name": "ihover",
   "version": "1.0.0",
-  "dependencies": {
+  "ignore": [
+    "preview"
+  ],
+  "devDependencies": {
     "bootstrap": "~3.1.0",
     "jquery": "~1.11.0",
     "google-code-prettify": "~1.0.1",
